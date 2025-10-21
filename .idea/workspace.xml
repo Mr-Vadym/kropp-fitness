@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0fad19-8220-4987-b146-064be1b9c956" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Heebo-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Heebo-Bold.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Heebo-Light.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Heebo-Light.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Yantramanav-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Yantramanav-Bold.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +97,7 @@
       <workItem from="1761081621022" duration="78000" />
       <workItem from="1761081717937" duration="242000" />
       <workItem from="1761082100357" duration="419000" />
-      <workItem from="1761082549066" duration="112000" />
+      <workItem from="1761082549066" duration="2726000" />
     </task>
     <servers />
   </component>

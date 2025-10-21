@@ -278,8 +278,16 @@ a {
     color: var(--color-light);
 }
 
+p {
+    margin-block: 0;
+}
+
 a:hover {
     color: var(--color-light-gray);
+}
+
+p:not([class]):not(:last-child) {
+    margin-bottom: 24px;
 }
 
 .container {
@@ -312,6 +320,35 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-light);
 }
 
+.backdrop-title {
+    position: relative;
+    z-index: 2;
+}
+
+.backdrop-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: calc(100% + 8px);
+    width: 26px;
+    aspect-ratio: 1;
+    background: url("./icons/plus.svg") center/contain no-repeat;
+}
+
+.backdrop-title::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: -1;
+    top: -0.45em;
+    left: -0.6em;
+    font-family: var(--font-family-accent);
+    color: red;
+    font-size: 2.8em;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-light-gray);
+    text-stroke: 1px var(--color-light-gray)
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -322,6 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2;
     letter-spacing: 1.2px;
     text-transform: uppercase;
+    text-decoration: none;
     white-space: nowrap;
     background-color: var(--color-light);
     border: none;
@@ -330,6 +368,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .button:hover {
     background-color: var(--color-light-gray);
+}
+
+.button.transparent {
+    position: relative;
+    height: var(--input-height);
+    padding-left: 31px;
+    padding-right: 88px;
+    background-color: transparent;
+    border: var(--border);
+}
+
+.button.transparent::after {
+    content: '';
+
 }
 
 .header {
@@ -498,22 +550,27 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 35px;
 }
 
-.container {
-}
-
 .motivation-card-body {
 }
 
-.motivation-card-title {
+.motivation-card-title:not(:last-child) {
+    margin-bottom: 14px;
 }
 
 .backdrop-title {
 }
 
 .motivation-card-description {
+    max-width: 400px;
+
+}
+
+.motivation-card-description:not(:last-child) {
+    margin-bottom: 37px;
 }
 
 .motivation-card-button {
+
 }
 
 .button {
