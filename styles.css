@@ -312,12 +312,12 @@ p:not([class]):not(:last-child) {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--color-light);
 }
 
 .title-medium {
-    font-size: 40px;
+    font-size: clamp(20px, 2.08vw, 40px);
     line-height: 1.3;
-    color: var(--color-light);
 }
 
 .backdrop-title {
@@ -381,7 +381,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .button.transparent::after {
     content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1;
+    background: url("./icons/arrow-top-right.svg") center/70% no-repeat;
+    border: var(--border);
+    border-radius: 50%;
 
+}
+
+.button.transparent:hover {
+    color: var(--color-light-gray);
+    background-color: var(--color-light-gray);
 }
 
 .header {
@@ -569,17 +581,65 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 37px;
 }
 
-.motivation-card-button {
-
+.training-types {
+    position: relative;
+    max-width: 1920px;
+    margin-inside: auto;
+    padding-block: 70px 120px;
+    background-color: var(--color-dark);
 }
 
-.button {
+.training-types-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
 }
 
-.transparent {
+.training-types-item {
+    --trainingTypesItemBgIconSize: 80px;
+    padding-block: var(--trainingTypesItemBgIconSize) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 32px;
+    background: url('./icons/transparent-arrow--bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
 }
 
-.motivation-card-image {
+.training-types-item-title {
+    font-size: 16px;
+}
+
+.join-us-video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 30px;
+    background: url("./images/join-us-bg.jpg") center/cover no-repeat var(--color-dark-alternate);
+}
+
+.join-us-video-play-button {
+    position: absolute;
+    inset: 50% 50% auto auto;
+    translate: -50% -50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    aspect-ratio: 1;
+}
+
+@media (max-width: 1919px) {
+    .motivation-card-image {
+        margin-block: -20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -590,7 +650,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .header,
-    .baner {
+    .banner {
         padding-inline: 15px;
     }
 
@@ -601,6 +661,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .banner {
         row-gap: 10px;
+    }
+
+    .motivation-card {
+        padding-block: 50px;
+    }
+
+    .motivation-card-image {
+        max-width: 30%;
+        height: auto;
+        margin-block: 0;
     }
 }
 
@@ -632,4 +702,38 @@ h1, h2, h3, h4, h5, h6 {
     .banner-info::before {
         margin-right: 10px;
     }
+
+    .motivation-card,
+    .motivation-item:nth-child(even) .motivation-card {
+        flex-direction: column-reverse;
+    }
+
+    .motivation-card {
+        row-gap: 30px;
+        padding-block: 30px;
+    }
+
+    .motivation-card-image {
+        max-width: 60%;
+    }
+
+
+    .motivation-card-description:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .training-types-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .training-types-item {
+        --trainingTypesItemBgIconSize: 50px;
+        row-gap: 18px;
+    }
+
+    .training-types-image {
+        max-width: 120px;
+    }
+
 }
